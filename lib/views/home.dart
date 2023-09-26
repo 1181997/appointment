@@ -1,6 +1,7 @@
 import 'package:appointment/views/add_appoitment.dart';
 import 'package:flutter/material.dart';
 
+
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
 
@@ -9,13 +10,14 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(left: 10,top: 24),
+            margin: EdgeInsets.only(left: 10,top: 54),
             child: Row(
               children: [
                 Container(
@@ -63,10 +65,13 @@ class _homeState extends State<home> {
                     ],
                   ),
                 ),
+
+                //SizedBox(width: MediaQuery.of(context).size.width,),
                 Container(
                   width: 32,
                   height: 32,
-                  margin: EdgeInsets.only(left: 160),
+                 margin: EdgeInsets.only(left: 160),
+
                   child: Image.asset('assets/images/home2.png'),
                 )
 
@@ -134,6 +139,8 @@ class _homeState extends State<home> {
                     ],
                   ),
                 ),
+
+                //SizedBox(width: MediaQuery.of(context).size.width,),
 
                 GestureDetector(
                   onTap: (){
@@ -217,270 +224,62 @@ class _homeState extends State<home> {
             ),
           ),
 
-          Container(
-            height: 86,
-            margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.6),
-            //child: Image.asset('assets/images/ellipse.png'),
-            child:  Container(
-
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.only(left: 10),
-                      width: 34,
-                      height: 42,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 5.50,
-                            top: 0,
-                            child: Container(
-                              width: 24,
-                              height: 24,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset('assets/images/home.png')
-                                ],
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            top: 26,
-                            child: Text(
-                              'Home',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 12,
-                                fontFamily: 'Manrope',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
-                  Expanded(
-                    child: Container(
-                      width: 40,
-                      height: 42,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 8.50,
-                            top: 0,
-                            child: Container(
-                              width: 24,
-                              height: 24,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset('assets/images/history.png')
-                                ],
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            top: 26,
-                            child: Text(
-                              'History',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Color(0xFFB1B1B1),
-                                fontSize: 12,
-                                fontFamily: 'Manrope',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
-                  Expanded(
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    margin: EdgeInsets.only(bottom: 30),
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-
-                          child: Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: Color(0xFFE31C31),
-                              shape: BoxShape.circle,
-
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          left: 9,
-                          top: 9,
-                          // bottom: 0,
-                          // right: 0,
-                          child: Container(
-                            width: 32,
-                            height: 32,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  left: 3.06,
-                                  top: 3,
-                                  // right: 3,
-                                  // bottom: 3,
-                                  child: Container(
-                                    width: 25.88,
-                                    height: 26,
-
-                                    child: Stack(children: [
-                                      Image.asset('assets/images/scan.png')
-                                    ]),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                    ),
-
-                  Expanded(
-                    child: Container(
-                      width: 42,
-                      height: 41.79,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 9,
-                            top: 0,
-                            child: Container(
-                              width: 24,
-                              height: 24,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: 24,
-                                    height: 24,
-                                    child: Stack(children: [
-                                      Image.asset('assets/images/explore.png')
-                                    ]),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            top: 25.79,
-                            child: Text(
-                              'Explore',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Color(0xFFB1B1B1),
-                                fontSize: 12,
-                                fontFamily: 'Manrope',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
-                  Expanded(
-                    child: Container(
-                      width: 36,
-                      height: 42,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 6,
-                            top: 0,
-                            child: Container(
-                              width: 24,
-                              height: 24,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Image.asset('assets/images/profile.png')
-                                ],
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            top: 26,
-                            child: Text(
-                              'Profile',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Color(0xFFB1B1B1),
-                                fontSize: 12,
-                                fontFamily: 'Manrope',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
-                ],
-              ),
-            ),
-            decoration: ShapeDecoration(
-              shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Color(0xFFD6D6D6)),
-              ),
-            ),
-          ),
-
-
-
-
         ],
       ),
+
+        floatingActionButton: FloatingActionButton(onPressed: () {},
+    child: Image.asset('assets/images/scan.png'),
+    backgroundColor: Color(0xFFE31C31),
+    ),
+    floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
+    bottomNavigationBar: BottomAppBar(
+
+    shape: CircularNotchedRectangle(),
+    notchMargin: 6,
+    clipBehavior: Clip.antiAlias,
+    child: Row(
+    mainAxisSize: MainAxisSize.max,
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+    Padding(padding: EdgeInsets.only(top: 20,bottom: 10),
+    child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+    Image.asset('assets/images/home.png'),
+    Text('Home')
+    ],
+    ),),
+    Padding(padding: EdgeInsets.only(top: 20,right: 30,bottom: 10),
+    child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+    Image.asset('assets/images/history.png'),
+    Text('History')
+    ],
+    ),),
+    Padding(padding: EdgeInsets.only(left: 45,top: 20,bottom: 10),
+    child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+    Image.asset('assets/images/explore.png'),
+    Text('Explore')
+    ],
+    ),),
+    Padding(padding: EdgeInsets.only(top: 20,bottom: 10),
+    child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+    Image.asset('assets/images/profile.png'),
+    Text('Profile')
+    ],
+    ),),
+
+    ],
+    ),
+    ),
+
     );
+
   }
 }

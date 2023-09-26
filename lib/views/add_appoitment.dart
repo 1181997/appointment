@@ -560,44 +560,34 @@ class _AddAppoitmentState extends State<AddAppoitment> {
             ),
           ),
 //SizedBox(height: 20 ,),
-          Container(
-            margin: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.02),
-            width: 198,
-            height: 50,
-            child: Stack(
-              children: [
-                Positioned(
-                  left: 0,
-                  top: 0,
-                  child: Container(
-                    width: 198,
-                    height: 50,
-                    decoration: ShapeDecoration(
-                      color: Color(0xFFE31C31),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: 65,
-                  top: 13,
-                  child: Text(
-                    'Submit',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'Manrope',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          )
+
         ],
       ),
-    );
+
+
+    bottomNavigationBar: Container(
+    margin: EdgeInsets.only(left: 86,right: 86,bottom: 10),
+    width: 198,
+    height: 50,
+    decoration: ShapeDecoration(
+    color: Color(0xFFE31C31),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+    ),
+    child: Center(
+    child: Text(
+    'Submit',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+    color: Colors.white,
+    fontSize: 20,
+    fontFamily: 'Manrope',
+    fontWeight: FontWeight.w600,
+    height: 0,
+    ),
+    ),
+    ),
+    ),
+      );
+
   }
 }

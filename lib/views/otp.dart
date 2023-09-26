@@ -21,7 +21,7 @@ class _otpState extends State<otp> {
       //margin: EdgeInsets.fromLTRB(24, 68, 101, 9.73),
       child: Image.asset('assets/images/mn.png'),
     ),
-
+            SizedBox(height: 25),
     Container(
     padding: EdgeInsets.only(left: 10),
     child: Text(
@@ -169,16 +169,20 @@ class _otpState extends State<otp> {
         ],
       ),
     ),
-      SizedBox(height: 80,),
+
+      SizedBox(height: MediaQuery.of(context).size.height -590,),
+
 
     GestureDetector(
       onTap: (){
         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>home()));
       },
       child: Container(
-        margin: EdgeInsets.only(top: 100),
+
+       // margin: EdgeInsets.only(top: 100),
         width: 375,
-        height: 200,
+        height: 291,
+
         color: Colors.grey,
         child: Stack(
           children: [
